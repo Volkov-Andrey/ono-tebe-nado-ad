@@ -1,19 +1,280 @@
-.element, .div {
-  max-width: 1100px;
-  margin: 0 auto;
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
 }
 
-.cover, .lots, .about {
-  padding: 0 20px;
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.header, .footer {
-  padding: 20px;
+.contact-info {
+  display: flex;
+  gap: 20px;
 }
 
-.lots-container {
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.nav-item.active {
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 600px;
+  margin: 40px 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.cta-button {
+  background: #000;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Lots Section */
+.lots-section {
+  margin: 80px 0;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.lots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.lot-card {
+  position: relative;
+  height: 400px;
+  padding: 30px;
+  border: 1px solid #000;
+}
+
+.lot-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.lot-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.lot-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.lot-description {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.view-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* About Section */
+.about-section {
+  margin: 80px 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-text {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin: 40px 0;
+}
+
+.about-description p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #000;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav-item.active {
+  font-weight: 700;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Media Queries для 1100px */
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero-title {
+    font-size: 100px;
+  }
+  
+  .lots-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .header-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hero-title {
+    font-size: 60px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
 }
