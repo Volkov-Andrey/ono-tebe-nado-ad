@@ -1,18 +1,19 @@
-.lots-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.element, .div {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .cover, .lots, .about {
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
-.button {
-  padding: 15px 30px;
+.header, .footer {
+  padding: 20px;
+}
+
+.lots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
 }
