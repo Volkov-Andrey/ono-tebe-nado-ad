@@ -1,17 +1,34 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-html,
+
 body {
-  margin: 0px;
-  height: 100%;
-  font-family: 'Raleway', sans-serif;
+  min-width: 1440px;
+  margin: 0;
+  font-family: Raleway, sans-serif;
 }
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote {
+  margin: 0;
+  padding: 0;
 }
+
 a {
-  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
 }
